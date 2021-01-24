@@ -10,6 +10,7 @@
     <TypeScriptModuleKind>CommonJS</TypeScriptModuleKind>
     <TypeScriptToolsVersion>4.1</TypeScriptToolsVersion>
     <SaveNodeJsSettingsInProjectFile>True</SaveNodeJsSettingsInProjectFile>
+    <NodeExePath>C:\Program Files\nodejs\node.exe</NodeExePath>
   </PropertyGroup>
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
@@ -39,6 +40,9 @@
   <ItemGroup>
     <TypeScriptCompile Include="app.ts" />
     <Content Include="AWS.CloudFormation.template" />
+    <Content Include="gulpfile.js">
+      <SubType>Code</SubType>
+    </Content>
     <Content Include="LICENSE" />
     <Content Include="README.md" />
     <Content Include="tsconfig.json" />

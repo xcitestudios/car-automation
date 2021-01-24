@@ -1,0 +1,778 @@
+{
+	"AWSTemplateFormatVersion": "2010-09-09",
+	"Metadata": {
+		"AWS::CloudFormation::Designer": {
+			"5190bfc3-de40-4890-94ee-65fa43c0b20f": {
+				"size": {
+					"width": 1110,
+					"height": 660
+				},
+				"position": {
+					"x": 80,
+					"y": 360
+				},
+				"z": 1,
+				"embeds": [
+					"5f99a420-324a-42e0-b10e-0a35dad87c63"
+				]
+			},
+			"6eaf67eb-5e28-4143-896a-b78beef62d0e": {
+				"size": {
+					"width": 60,
+					"height": 60
+				},
+				"position": {
+					"x": 260,
+					"y": 570
+				},
+				"z": 3,
+				"parent": "5f99a420-324a-42e0-b10e-0a35dad87c63",
+				"embeds": [],
+				"iscontainedinside": [
+					"5f99a420-324a-42e0-b10e-0a35dad87c63",
+					"5190bfc3-de40-4890-94ee-65fa43c0b20f",
+					"5f99a420-324a-42e0-b10e-0a35dad87c63",
+					"5f99a420-324a-42e0-b10e-0a35dad87c63",
+					"5f99a420-324a-42e0-b10e-0a35dad87c63",
+					"5f99a420-324a-42e0-b10e-0a35dad87c63",
+					"5f99a420-324a-42e0-b10e-0a35dad87c63",
+					"5f99a420-324a-42e0-b10e-0a35dad87c63",
+					"5f99a420-324a-42e0-b10e-0a35dad87c63",
+					"5f99a420-324a-42e0-b10e-0a35dad87c63",
+					"5f99a420-324a-42e0-b10e-0a35dad87c63",
+					"5f99a420-324a-42e0-b10e-0a35dad87c63",
+					"5f99a420-324a-42e0-b10e-0a35dad87c63",
+					"5f99a420-324a-42e0-b10e-0a35dad87c63",
+					"5f99a420-324a-42e0-b10e-0a35dad87c63",
+					"5f99a420-324a-42e0-b10e-0a35dad87c63"
+				]
+			},
+			"98e44296-4c90-4332-a351-bde5aad526a4": {
+				"size": {
+					"width": 60,
+					"height": 60
+				},
+				"position": {
+					"x": 690,
+					"y": 420
+				},
+				"z": 1,
+				"embeds": [],
+				"iscontainedinside": [
+					"5190bfc3-de40-4890-94ee-65fa43c0b20f"
+				],
+				"dependson": [
+					"6eaf67eb-5e28-4143-896a-b78beef62d0e"
+				]
+			},
+			"5f99a420-324a-42e0-b10e-0a35dad87c63": {
+				"size": {
+					"width": 630,
+					"height": 420
+				},
+				"position": {
+					"x": 110,
+					"y": 390
+				},
+				"z": 2,
+				"parent": "5190bfc3-de40-4890-94ee-65fa43c0b20f",
+				"embeds": [
+					"6eaf67eb-5e28-4143-896a-b78beef62d0e",
+					"a53ee358-3373-41cc-a80a-963ea0303033"
+				],
+				"iscontainedinside": [
+					"5190bfc3-de40-4890-94ee-65fa43c0b20f",
+					"5190bfc3-de40-4890-94ee-65fa43c0b20f",
+					"5190bfc3-de40-4890-94ee-65fa43c0b20f",
+					"5190bfc3-de40-4890-94ee-65fa43c0b20f",
+					"5190bfc3-de40-4890-94ee-65fa43c0b20f",
+					"5190bfc3-de40-4890-94ee-65fa43c0b20f",
+					"5190bfc3-de40-4890-94ee-65fa43c0b20f",
+					"5190bfc3-de40-4890-94ee-65fa43c0b20f",
+					"5190bfc3-de40-4890-94ee-65fa43c0b20f",
+					"5190bfc3-de40-4890-94ee-65fa43c0b20f",
+					"5190bfc3-de40-4890-94ee-65fa43c0b20f",
+					"5190bfc3-de40-4890-94ee-65fa43c0b20f",
+					"5190bfc3-de40-4890-94ee-65fa43c0b20f",
+					"5190bfc3-de40-4890-94ee-65fa43c0b20f",
+					"5190bfc3-de40-4890-94ee-65fa43c0b20f"
+				]
+			},
+			"c4b8f32d-aa4d-440d-8a29-c728682b638d": {
+				"size": {
+					"width": 60,
+					"height": 60
+				},
+				"position": {
+					"x": 750,
+					"y": 420
+				},
+				"z": 1,
+				"embeds": [],
+				"isassociatedwith": [
+					"98e44296-4c90-4332-a351-bde5aad526a4"
+				],
+				"iscontainedinside": [
+					"5190bfc3-de40-4890-94ee-65fa43c0b20f"
+				]
+			},
+			"a53ee358-3373-41cc-a80a-963ea0303033": {
+				"size": {
+					"width": 60,
+					"height": 60
+				},
+				"position": {
+					"x": 410,
+					"y": 600
+				},
+				"z": 3,
+				"parent": "5f99a420-324a-42e0-b10e-0a35dad87c63",
+				"embeds": [],
+				"isassociatedwith": [
+					"c4b8f32d-aa4d-440d-8a29-c728682b638d"
+				],
+				"iscontainedinside": [
+					"5190bfc3-de40-4890-94ee-65fa43c0b20f"
+				]
+			},
+			"accf9238-ecfe-4ec1-9f5b-f562e2d13159": {
+				"size": {
+					"width": 60,
+					"height": 60
+				},
+				"position": {
+					"x": 960,
+					"y": 240
+				},
+				"z": 1,
+				"embeds": []
+			},
+			"e4795861-cd9a-4864-a5a7-375b3a53c397": {
+				"size": {
+					"width": 60,
+					"height": 60
+				},
+				"position": {
+					"x": 1020,
+					"y": 180
+				},
+				"z": 1,
+				"embeds": [],
+				"isassociatedwith": [
+					"accf9238-ecfe-4ec1-9f5b-f562e2d13159"
+				]
+			},
+			"0f65d6d1-143d-46d4-88de-7570e9e705f8": {
+				"size": {
+					"width": 60,
+					"height": 60
+				},
+				"position": {
+					"x": 60,
+					"y": 90
+				},
+				"z": 1,
+				"embeds": []
+			},
+			"657cbf61-ef27-497d-9c9a-d6af0b66ff48": {
+				"size": {
+					"width": 60,
+					"height": 60
+				},
+				"position": {
+					"x": -220,
+					"y": 410
+				},
+				"z": 0,
+				"embeds": []
+			},
+			"cf0f0e66-b1a6-435c-a988-b2ce0167bd57": {
+				"size": {
+					"width": 60,
+					"height": 60
+				},
+				"position": {
+					"x": -220,
+					"y": 280
+				},
+				"z": 0,
+				"embeds": []
+			},
+			"22d45888-6f86-4476-b5c1-3147070b66d3": {
+				"size": {
+					"width": 60,
+					"height": 60
+				},
+				"position": {
+					"x": -220,
+					"y": 510
+				},
+				"z": 0,
+				"embeds": []
+			},
+			"c7da8f95-c68a-4936-8ebf-205c66c24aa7": {
+				"size": {
+					"width": 60,
+					"height": 60
+				},
+				"position": {
+					"x": -100,
+					"y": 410
+				},
+				"z": 0,
+				"embeds": [],
+				"isassociatedwith": [
+					"657cbf61-ef27-497d-9c9a-d6af0b66ff48"
+				]
+			},
+			"95907da9-7ed5-4e6c-ac00-38a3bb98c638": {
+				"size": {
+					"width": 60,
+					"height": 60
+				},
+				"position": {
+					"x": -80,
+					"y": 200
+				},
+				"z": 0,
+				"embeds": []
+			},
+			"ba27cd24-e26a-48ff-9cbe-73558659fc64": {
+				"size": {
+					"width": 60,
+					"height": 60
+				},
+				"position": {
+					"x": -200,
+					"y": 120
+				},
+				"z": 0,
+				"embeds": []
+			}
+		}
+	},
+	"Parameters": {
+		"S3CodeBucket": {
+			"Type": "String",
+			"Description": "Bucket where the Lambda source code is located"
+		},
+		"DomainName": {
+			"Type": "String",
+			"Description": "Prefix for Cognito user pool domain"
+		},
+		"GoogleClientId": {
+			"Type": "String",
+			"Description": "Google application client_id"
+		},
+		"GoogleClientSecret": {
+			"Type": "String",
+			"Description": "Google application client_secret"
+		}
+	},
+	"Resources": {
+		"APIGatewayRestApi": {
+			"Type": "AWS::ApiGateway::RestApi",
+			"Properties": {
+				"Name": "CarManagementAPI"
+			},
+			"Metadata": {
+				"AWS::CloudFormation::Designer": {
+					"id": "5190bfc3-de40-4890-94ee-65fa43c0b20f"
+				}
+			}
+		},
+		"APIGatewayPostMethod": {
+			"Type": "AWS::ApiGateway::Method",
+			"Properties": {
+				"RestApiId": {
+					"Ref": "APIGatewayRestApi"
+				},
+				"ApiKeyRequired": false,
+				"ResourceId": {
+					"Ref": "APIResource"
+				},
+				"AuthorizationType": "NONE",
+				"HttpMethod": "POST",
+				"MethodResponses": [
+					{
+						"StatusCode": 200
+					},
+					{
+						"StatusCode": 500
+					}
+				],
+				"Integration": {
+					"IntegrationHttpMethod": "POST",
+					"Type": "AWS_PROXY",
+					"Uri": {
+						"Fn::Sub": [
+							"arn:aws:apigateway:${AWS::Region}:lambda:path/2015-03-31/functions/${lambdaArn}/invocations",
+							{
+								"lambdaArn": {
+									"Fn::GetAtt": [
+										"LambdaCarManagementFunction",
+										"Arn"
+									]
+								}
+							}
+						]
+					}
+				}
+			},
+			"Metadata": {
+				"AWS::CloudFormation::Designer": {
+					"id": "6eaf67eb-5e28-4143-896a-b78beef62d0e"
+				}
+			}
+		},
+		"APIGatewayDeployment": {
+			"Type": "AWS::ApiGateway::Deployment",
+			"DependsOn": "APIGatewayPostMethod",
+			"Properties": {
+				"RestApiId": {
+					"Ref": "APIGatewayRestApi"
+				}
+			},
+			"Metadata": {
+				"AWS::CloudFormation::Designer": {
+					"id": "98e44296-4c90-4332-a351-bde5aad526a4"
+				}
+			}
+		},
+		"APIResource": {
+			"Type": "AWS::ApiGateway::Resource",
+			"Properties": {
+				"ParentId": {
+					"Fn::GetAtt": [
+						"APIGatewayRestApi",
+						"RootResourceId"
+					]
+				},
+				"PathPart": "proxy",
+				"RestApiId": {
+					"Ref": "APIGatewayRestApi"
+				}
+			},
+			"Metadata": {
+				"AWS::CloudFormation::Designer": {
+					"id": "5f99a420-324a-42e0-b10e-0a35dad87c63"
+				}
+			}
+		},
+		"APIStage": {
+			"Type": "AWS::ApiGateway::Stage",
+			"Properties": {
+				"StageName": "prod",
+				"RestApiId": {
+					"Ref": "APIGatewayRestApi"
+				},
+				"DeploymentId": {
+					"Ref": "APIGatewayDeployment"
+				}
+			},
+			"Metadata": {
+				"AWS::CloudFormation::Designer": {
+					"id": "c4b8f32d-aa4d-440d-8a29-c728682b638d"
+				}
+			}
+		},
+		"APIUsagePlan": {
+			"Type": "AWS::ApiGateway::UsagePlan",
+			"Properties": {
+				"ApiStages": [
+					{
+						"ApiId": {
+							"Ref": "APIGatewayRestApi"
+						},
+						"Stage": {
+							"Ref": "APIStage"
+						}
+					}
+				],
+				"Description": "CarAPI",
+				"UsagePlanName": "CarAPI"
+			},
+			"Metadata": {
+				"AWS::CloudFormation::Designer": {
+					"id": "a53ee358-3373-41cc-a80a-963ea0303033"
+				}
+			}
+		},
+		"LambdaCarManagementFunctionExecutionRole": {
+			"Type": "AWS::IAM::Role",
+			"DependsOn": "UserData",
+			"Properties": {
+				"Path": "/",
+				"Policies": [
+					{
+						"PolicyName": "CloudwatchLogs",
+						"PolicyDocument": {
+							"Statement": [
+								{
+									"Action": [
+										"logs:CreateLogGroup",
+										"logs:CreateLogStream",
+										"logs:GetLogEvents",
+										"logs:PutLogEvents"
+									],
+									"Resource": {
+										"Fn::Sub": "arn:aws:logs:${AWS::Region}:${AWS::AccountId}:*"
+									},
+									"Effect": "Allow"
+								}
+							]
+						}
+					},
+					{
+						"PolicyName": "LambdaDynamoWriteAccess",
+						"PolicyDocument": {
+							"Statement": [
+								{
+									"Action": [
+										"dynamodb:PutItem",
+										"dynamodb:UpdateItem",
+										"dynamodb:BatchWriteItem"
+									],
+									"Resource": [
+										{
+											"Fn::Join": [
+												"",
+												[
+													{
+														"Fn::Sub": "arn:aws:dynamodb:${AWS::Region}:${AWS::AccountId}:table/"
+													},
+													{
+														"Fn::Select": [
+															1,
+															{
+																"Fn::Split": [
+																	"/",
+																	{
+																		"Fn::GetAtt": [
+																			"UserData",
+																			"Arn"
+																		]
+																	}
+																]
+															}
+														]
+													}
+												]
+											]
+										}
+									],
+									"Effect": "Allow"
+								}
+							]
+						}
+					}
+				],
+				"AssumeRolePolicyDocument": {
+					"Statement": [
+						{
+							"Action": [
+								"sts:AssumeRole"
+							],
+							"Effect": "Allow",
+							"Principal": {
+								"Service": [
+									"lambda.amazonaws.com"
+								]
+							}
+						}
+					]
+				}
+			},
+			"Metadata": {
+				"AWS::CloudFormation::Designer": {
+					"id": "0f65d6d1-143d-46d4-88de-7570e9e705f8"
+				}
+			}
+		},
+		"LambdaCarManagementFunction": {
+			"Type": "AWS::Lambda::Function",
+			"Properties": {
+				"Runtime": "nodejs12.x",
+				"Handler": "app.handler",
+				"Code": {
+					"S3Bucket": {
+						"Ref": "S3CodeBucket"
+					},
+					"S3Key": "car-api.zip"
+				},
+				"FunctionName": "car-management",
+				"Description": "Car management",
+				"MemorySize": 128,
+				"Timeout": 300,
+				"Environment": {
+					"Variables": {
+						"DYNAMO_DB_TABLE": {
+							"Fn::Select": [
+								1,
+								{
+									"Fn::Split": [
+										"/",
+										{
+											"Fn::GetAtt": [
+												"UserData",
+												"Arn"
+											]
+										}
+									]
+								}
+							]
+						}
+					}
+				},
+				"Role": {
+					"Fn::GetAtt": [
+						"LambdaCarManagementFunctionExecutionRole",
+						"Arn"
+					]
+				}
+			},
+			"Metadata": {
+				"AWS::CloudFormation::Designer": {
+					"id": "accf9238-ecfe-4ec1-9f5b-f562e2d13159"
+				}
+			}
+		},
+		"LambdaCarManagementFunctionPermission": {
+			"Type": "AWS::Lambda::Permission",
+			"Properties": {
+				"FunctionName": {
+					"Ref": "LambdaCarManagementFunction"
+				},
+				"Action": "lambda:InvokeFunction",
+				"Principal": "apigateway.amazonaws.com",
+				"SourceArn": {
+					"Fn::Sub": "arn:aws:execute-api:${AWS::Region}:${AWS::AccountId}:${APIGatewayRestApi}/*"
+				}
+			},
+			"Metadata": {
+				"AWS::CloudFormation::Designer": {
+					"id": "e4795861-cd9a-4864-a5a7-375b3a53c397"
+				}
+			}
+		},
+		"UserPool": {
+			"Type": "AWS::Cognito::UserPool",
+			"Properties": {
+				"UserPoolName": "car-automation-user-pool",
+				"MfaConfiguration": "OFF",
+				"Schema": [
+					{
+						"Name": "email",
+						"AttributeDataType": "String",
+						"Mutable": false,
+						"Required": true
+					}
+				]
+			},
+			"Metadata": {
+				"AWS::CloudFormation::Designer": {
+					"id": "657cbf61-ef27-497d-9c9a-d6af0b66ff48"
+				}
+			}
+		},
+		"UserPoolDomain": {
+			"Type": "AWS::Cognito::UserPoolDomain",
+			"DependsOn": "UserPool",
+			"Properties": {
+				"Domain": {
+					"Ref": "DomainName"
+				},
+				"UserPoolId": {
+					"Ref": "UserPool"
+				}
+			},
+			"Metadata": {
+				"AWS::CloudFormation::Designer": {
+					"id": "cf0f0e66-b1a6-435c-a988-b2ce0167bd57"
+				}
+			}
+		},
+		"GoogleIdentityProvider": {
+			"Type": "AWS::Cognito::UserPoolIdentityProvider",
+			"Properties": {
+				"UserPoolId": {
+					"Ref": "UserPool"
+				},
+				"ProviderName": "Google",
+				"ProviderDetails": {
+					"client_id": {
+						"Ref": "GoogleClientId"
+					},
+					"client_secret": {
+						"Ref": "GoogleClientSecret"
+					},
+					"authorize_scopes": "profile email openid"
+				},
+				"ProviderType": "Google",
+				"AttributeMapping": {
+					"email": "email",
+					"username": "sub"
+				}
+			},
+			"Metadata": {
+				"AWS::CloudFormation::Designer": {
+					"id": "22d45888-6f86-4476-b5c1-3147070b66d3"
+				}
+			}
+		},
+		"UserPoolClient": {
+			"Type": "AWS::Cognito::UserPoolClient",
+			"DependsOn": "GoogleIdentityProvider",
+			"Properties": {
+				"UserPoolId": {
+					"Ref": "UserPool"
+				},
+				"AllowedOAuthFlows": [
+					"implicit"
+				],
+				"AllowedOAuthFlowsUserPoolClient": true,
+				"AllowedOAuthScopes": [
+					"email",
+					"openid",
+					"profile"
+				],
+				"SupportedIdentityProviders": [
+					"Google"
+				],
+				"CallbackURLs": [
+					"https://xcitestudios.com"
+				],
+				"LogoutURLs": [
+					"https://xcitestudios.com"
+				]
+			},
+			"Metadata": {
+				"AWS::CloudFormation::Designer": {
+					"id": "c7da8f95-c68a-4936-8ebf-205c66c24aa7"
+				}
+			}
+		},
+		"UserData": {
+			"Type": "AWS::DynamoDB::Table",
+			"Properties": {
+				"AttributeDefinitions": [
+					{
+						"AttributeName": "uid",
+						"AttributeType": "S"
+					}
+				],
+				"KeySchema": [
+					{
+						"AttributeName": "uid",
+						"KeyType": "HASH"
+					}
+				],
+				"BillingMode": "PAY_PER_REQUEST",
+				"SSESpecification": {
+					"KMSMasterKeyId": {
+						"Ref": "DynamoDbKey"
+					},
+					"SSEEnabled": true,
+					"SSEType": "KMS"
+				}
+			},
+			"Metadata": {
+				"AWS::CloudFormation::Designer": {
+					"id": "95907da9-7ed5-4e6c-ac00-38a3bb98c638"
+				}
+			}
+		},
+		"DynamoDbKey": {
+			"Type": "AWS::KMS::Key",
+			"Properties": {
+				"Description": "An example CMK",
+				"KeyPolicy": {
+					"Version": "2012-10-17",
+					"Statement": [
+						{
+							"Sid": "Allow administration of the key",
+							"Effect": "Allow",
+							"Principal": {
+								"AWS": {
+									"Fn::Sub": "arn:aws:iam::${AWS::AccountId}:root"
+								}
+							},
+							"Action": [
+								"kms:*"
+							],
+							"Resource": "*"
+						}
+					]
+				}
+			},
+			"Metadata": {
+				"AWS::CloudFormation::Designer": {
+					"id": "ba27cd24-e26a-48ff-9cbe-73558659fc64"
+				}
+			}
+		}
+	},
+	"Outputs": {
+		"GoogleAuthorizedJavaScriptOrigins": {
+			"Description": "URL used for Authorised JavaScript origins in Google OAuth setup",
+			"Value": {
+				"Fn::Join": [
+					"",
+					[
+						"https://",
+						{
+							"Ref": "DomainName"
+						},
+						".auth.",
+						{
+							"Ref": "AWS::Region"
+						},
+						".amazoncognito.com"
+					]
+				]
+			}
+		},
+		"GoogleAuthorizedRedirectUrl": {
+			"Description": "URL used for Authorised redirect URIs in Google OAuth setup",
+			"Value": {
+				"Fn::Join": [
+					"",
+					[
+						"https://",
+						{
+							"Ref": "DomainName"
+						},
+						".auth.",
+						{
+							"Ref": "AWS::Region"
+						},
+						".amazoncognito.com/oauth2/idpresponse"
+					]
+				]
+			}
+		},
+		"RedirectUrlForTesting": {
+			"Description": "Use this URL for testing it works",
+			"Value": {
+				"Fn::Join": [
+					"",
+					[
+						"https://",
+						{
+							"Ref": "DomainName"
+						},
+						".auth.",
+						{
+							"Ref": "AWS::Region"
+						},
+						".amazoncognito.com/login?response_type=token&client_id=",
+						{
+							"Ref": "UserPoolClient"
+						},
+						"&redirect_uri=https://lambdaurl/"
+					]
+				]
+			}
+		}
+	}
+}

@@ -4,7 +4,7 @@
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
     <Name>CarAutomation</Name>
     <RootNamespace>CarAutomation</RootNamespace>
-    <StartupFile>_testdriver.js</StartupFile>
+    <StartupFile>lamba-src\_testdriver.js</StartupFile>
     <EnableTypeScript>true</EnableTypeScript>
     <TypeScriptSourceMap>true</TypeScriptSourceMap>
     <TypeScriptModuleKind>CommonJS</TypeScriptModuleKind>
@@ -38,53 +38,66 @@
   <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
   </PropertyGroup>
   <ItemGroup>
-    <TypeScriptCompile Include="app.ts" />
+    <TypeScriptCompile Include="lamba-src\app.ts" />
     <Content Include="AWS.CloudFormation.template" />
     <Content Include="gulpfile.js">
       <SubType>Code</SubType>
     </Content>
     <Content Include="LICENSE" />
     <Content Include="README.md" />
+    <Content Include="s3-src\index.html">
+      <SubType>Code</SubType>
+    </Content>
+    <Content Include="s3-src\js\app.tsx">
+      <SubType>Code</SubType>
+    </Content>
+    <Content Include="webpack-config.js" />
+    <Content Include="server.js">
+      <SubType>Code</SubType>
+    </Content>
     <Content Include="tsconfig.json" />
     <Content Include="_sampleEvent.json" />
-    <Content Include="_testdriver.js" />
+    <Content Include="lamba-src\_testdriver.js" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Event\" />
-    <Folder Include="Event\ParsedBody\" />
-    <Folder Include="Storage\" />
-    <Folder Include="Storage\Amazon\" />
-    <Folder Include="Tesla\" />
-    <Folder Include="Tesla\ParsedBody\" />
-    <Folder Include="Wallbox\" />
+    <Folder Include="lamba-src\Event\" />
+    <Folder Include="lamba-src\Event\ParsedBody\" />
+    <Folder Include="lamba-src\" />
+    <Folder Include="s3-src\" />
+    <Folder Include="s3-src\js\" />
+    <Folder Include="lamba-src\Storage\" />
+    <Folder Include="lamba-src\Storage\Amazon\" />
+    <Folder Include="lamba-src\Tesla\" />
+    <Folder Include="lamba-src\Tesla\ParsedBody\" />
+    <Folder Include="lamba-src\Wallbox\" />
   </ItemGroup>
   <ItemGroup>
-    <TypeScriptCompile Include="Event\ParsedBody.ts" />
-    <TypeScriptCompile Include="Tesla\ParsedBody\Actions.ts" />
-    <TypeScriptCompile Include="Tesla\ParsedBody\TeslaAction.ts" />
-    <TypeScriptCompile Include="Event\ParsedBody\Actions.ts" />
-    <TypeScriptCompile Include="Tesla\ParsedBody\TeslaAuthenticate.ts">
+    <TypeScriptCompile Include="lamba-src\Event\ParsedBody.ts" />
+    <TypeScriptCompile Include="lamba-src\Tesla\ParsedBody\Actions.ts" />
+    <TypeScriptCompile Include="lamba-src\Tesla\ParsedBody\TeslaAction.ts" />
+    <TypeScriptCompile Include="lamba-src\Event\ParsedBody\Actions.ts" />
+    <TypeScriptCompile Include="lamba-src\Tesla\ParsedBody\TeslaAuthenticate.ts">
       <SubType>Code</SubType>
     </TypeScriptCompile>
-    <TypeScriptCompile Include="Storage\Amazon\DynamoDb.ts">
+    <TypeScriptCompile Include="lamba-src\Storage\Amazon\DynamoDb.ts">
       <SubType>Code</SubType>
     </TypeScriptCompile>
-    <TypeScriptCompile Include="Event\EventInterface.ts">
+    <TypeScriptCompile Include="lamba-src\Event\EventInterface.ts">
       <SubType>Code</SubType>
     </TypeScriptCompile>
-    <TypeScriptCompile Include="Storage\Storage.ts">
+    <TypeScriptCompile Include="lamba-src\Storage\Storage.ts">
       <SubType>Code</SubType>
     </TypeScriptCompile>
-    <TypeScriptCompile Include="Tesla\Api.ts" />
-    <TypeScriptCompile Include="Tesla\TokenResponse.ts" />
-    <TypeScriptCompile Include="Tesla\VehicleState.ts" />
-    <TypeScriptCompile Include="Tesla\Vehicle.ts">
+    <TypeScriptCompile Include="lamba-src\Tesla\Api.ts" />
+    <TypeScriptCompile Include="lamba-src\Tesla\TokenResponse.ts" />
+    <TypeScriptCompile Include="lamba-src\Tesla\VehicleState.ts" />
+    <TypeScriptCompile Include="lamba-src\Tesla\Vehicle.ts">
       <SubType>Code</SubType>
     </TypeScriptCompile>
     <TypeScriptCompile Include="package.json">
       <SubType>Code</SubType>
     </TypeScriptCompile>
-    <TypeScriptCompile Include="Wallbox\Api.ts">
+    <TypeScriptCompile Include="lamba-src\Wallbox\Api.ts">
       <SubType>Code</SubType>
     </TypeScriptCompile>
   </ItemGroup>

@@ -2,7 +2,8 @@
 
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
-const { CleanWebpackPlugin } = require('clean-webpack-plugin')
+const { CleanWebpackPlugin } = require('clean-webpack-plugin');
+const copyWebpackPlugin = require('copy-webpack-plugin');
 
 module.exports = {
     mode: "development",
@@ -17,6 +18,7 @@ module.exports = {
     resolve: {
         extensions: [".ts", ".tsx", ".js"],
     },
+    
     module: {
         rules: [
             {
@@ -29,6 +31,14 @@ module.exports = {
         new HtmlWebpackPlugin({
             template: path.resolve(__dirname, './s3-src/index.html'),
             filename: 'index.html'
+        }),
+        new copyWebpackPlugin({
+            patterns: [
+                {
+                    from: "./s3-src/js/ui-config.json",
+                    to: "./"
+                }
+            ]
         }),
         new CleanWebpackPlugin(),
     ]

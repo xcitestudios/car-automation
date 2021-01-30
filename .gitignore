@@ -5,3 +5,4 @@ bin/
 node_modules/
 obj/
 car-api.zip
+s3-src/js/ui-config.json

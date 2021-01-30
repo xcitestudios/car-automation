@@ -1,12 +1,13 @@
 import * as React from "react";
-import { GoogleLoginComponent } from "./components/google.login.component";
+import { CognitoLoginComponent } from "./components/cognito.login.component";
 import { TeslaLoginComponent } from "./forms/tesla.login.component";
+import config from "./ui-config.json";
 
 export class App extends React.Component {
     render() {
         return (
             <div>
-                <GoogleLoginComponent clientId="abc" />
+                <CognitoLoginComponent clientId={config.cognitoClientId} userPoolDns={config.cognitoPoolDns} />
                 <TeslaLoginComponent />
             </div>
         );

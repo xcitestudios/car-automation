@@ -59,6 +59,7 @@
     <Content Include="_sampleEvent.json" />
     <Content Include="lamba-src\_testdriver.js" />
     <TypeScriptCompile Include="s3-src\js\app.tsx" />
+    <TypeScriptCompile Include="s3-src\js\components\google.login.component.tsx" />
     <TypeScriptCompile Include="s3-src\js\forms\tesla.login.component.tsx" />
   </ItemGroup>
   <ItemGroup>
@@ -72,6 +73,7 @@
     <Folder Include="lamba-src\Tesla\" />
     <Folder Include="lamba-src\Tesla\ParsedBody\" />
     <Folder Include="lamba-src\Wallbox\" />
+    <Folder Include="s3-src\js\components\" />
     <Folder Include="s3-src\js\forms\" />
   </ItemGroup>
   <ItemGroup>

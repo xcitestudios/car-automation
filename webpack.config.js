@@ -32,14 +32,6 @@ module.exports = {
             template: path.resolve(__dirname, './s3-src/index.html'),
             filename: 'index.html'
         }),
-        new copyWebpackPlugin({
-            patterns: [
-                {
-                    from: "./s3-src/js/ui-config.json",
-                    to: "./"
-                }
-            ]
-        }),
         new CleanWebpackPlugin(),
     ]
 };

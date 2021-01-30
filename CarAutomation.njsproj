@@ -48,16 +48,18 @@
     <Content Include="s3-src\index.html">
       <SubType>Code</SubType>
     </Content>
-    <Content Include="s3-src\js\app.tsx">
+    <Content Include="s3-src\js\main.tsx">
       <SubType>Code</SubType>
     </Content>
-    <Content Include="webpack-config.js" />
+    <Content Include="webpack.config.js" />
     <Content Include="server.js">
       <SubType>Code</SubType>
     </Content>
     <Content Include="tsconfig.json" />
     <Content Include="_sampleEvent.json" />
     <Content Include="lamba-src\_testdriver.js" />
+    <TypeScriptCompile Include="s3-src\js\app.tsx" />
+    <TypeScriptCompile Include="s3-src\js\forms\tesla.login.component.tsx" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="lamba-src\Event\" />
@@ -70,6 +72,7 @@
     <Folder Include="lamba-src\Tesla\" />
     <Folder Include="lamba-src\Tesla\ParsedBody\" />
     <Folder Include="lamba-src\Wallbox\" />
+    <Folder Include="s3-src\js\forms\" />
   </ItemGroup>
   <ItemGroup>
     <TypeScriptCompile Include="lamba-src\Event\ParsedBody.ts" />

@@ -4,16 +4,22 @@ import axios, { AxiosResponse, Method } from 'axios';
 import { Token } from './TokenResponse';
 import { Vehicle } from './Vehicle';
 
+interface ObjectTidyingConversion {
+    vehicle_id: string,
+    display_name: string,
+    option_codes: Function
+}
+
 export default class Api {
     protected readonly clientSecret: string = "c7257eb71a564034f9419ee651c7d0e5f7aa6bfbd18bafb5c5c033b093bb2fa3";
     protected readonly clientId: string = "81527cff06843c8634fdc09e8ac0abefb46ac849f38fe1e431c2ef2106796384";
 
     protected readonly baseUrl: string = "https://owner-api.teslamotors.com/";
 
-    protected readonly objectTidyingConversions: object = {
+    protected readonly objectTidyingConversions: ObjectTidyingConversion = {
         vehicle_id: 'vehicleId',
         display_name: 'displayName',
-        option_codes: function (codes) {
+        option_codes: function (codes: string) {
             return { 'optionCodes': codes.split(',') };
         }
     };
@@ -44,10 +50,12 @@ export default class Api {
                 continue;
             }
 
-            if (typeof this.objectTidyingConversions[k] === 'function') {
-                Object.assign(input, this.objectTidyingConversions[k](input[k]));
+            let key = k as keyof ObjectTidyingConversion;
+
+            if (typeof this.objectTidyingConversions[key] === 'function') {
+                Object.assign(input, (this.objectTidyingConversions[key] as Function)(input[k]));
             } else {
-                input[this.objectTidyingConversions[k]] = input[k];
+                input[this.objectTidyingConversions[key] as string] = input[k];
             }
             delete input[k];
         }

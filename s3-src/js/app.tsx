@@ -1,14 +1,14 @@
-declare var require: any
+import * as React from "react";
+import { GoogleLoginComponent } from "./components/google.login.component";
+import { TeslaLoginComponent } from "./forms/tesla.login.component";
 
-var React = require('react');
-var ReactDOM = require('react-dom');
-
-export class Hello extends React.Component {
+export class App extends React.Component {
     render() {
         return (
-            <div/>
+            <div>
+                <GoogleLoginComponent clientId="abc" />
+                <TeslaLoginComponent />
+            </div>
         );
     }
 }
-
-ReactDOM.render(<Hello />, document.getElementById('root'));

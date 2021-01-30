@@ -12,9 +12,4 @@ gulp.task('lambda:zip', () => {
 
 gulp.task('lambda', gulp.series(['lambda:zip']));
 
-gulp.task('s3', () => {
-    return gulp.src('./s3-src/index.html')
-        .pipe(gulp.dest('./dist/s3-src'))
-});
-
-gulp.task("launch:all", gulp.parallel(["lambda", "s3"]));
+gulp.task("launch:all", gulp.parallel(["lambda"]));

@@ -1,4 +1,3 @@
-import { CognitoUserPool, CognitoUserAttribute, CognitoUser } from 'amazon-cognito-identity-js';
 import { Link } from "@material-ui/core";
 import * as React from "react";
 

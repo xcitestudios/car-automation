@@ -7,31 +7,59 @@ export class TeslaLoginComponent extends React.Component {
         lambdaUrl: string
     }
 
+    state: {
+        loginFailureReason: null | string
+    }
+
+    constructor(props) {
+        super(props);
+
+        this.state = {
+            loginFailureReason: null
+        };
+    }
+
+
     async doLogin(e: React.FormEvent<HTMLFormElement>) {
         e.preventDefault();
 
         const formData = new FormData(e.target as HTMLFormElement);
 
         let body: { [key: string]: any; } = {
-            cognitoAcessToken: this.props.accessToken
+            action: 'teslaAuthenticate',
+            data: {
+                jwt: {
+                    token: this.props.accessToken
+                }
+            }
         };
 
         formData.forEach((v, k) => {
-            body[k] = v.toString();
+            body.data[k] = v.toString();
         });
 
-        const response = await fetch(
-            this.props.lambdaUrl,
-            {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json',
-                },
-                body: JSON.stringify(body)
-            }
-        );
+        let response: Response;
 
-        const result  = response.json();
+        try {
+            response = await fetch(
+                this.props.lambdaUrl,
+                {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify(body)
+                }
+            );
+        } catch (err) {
+            this.setState({
+                loginFailureReason: err
+            });
+
+            return;
+        }
+
+        const result = response.json();
 
     }
 
@@ -40,9 +68,17 @@ export class TeslaLoginComponent extends React.Component {
             return <div />;
         }
 
+        let errorMessage: JSX.Element = undefined;
+
+        if (this.state.loginFailureReason !== null) {
+            errorMessage = <div>{this.state.loginFailureReason}</div>
+        }
+
         return (
             <form onSubmit={this.doLogin}>
                 <p>Enter your Tesla username/password. This will be used to generate a token used to access your account, your username/password will not be stored.</p>
+
+                {errorMessage}
             
                 <FormControl>
                     <InputLabel htmlFor="username">Username:</InputLabel> 

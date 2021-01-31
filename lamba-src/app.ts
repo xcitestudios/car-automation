@@ -23,7 +23,7 @@ export const handler = async (event: EventInterface): Promise<any> => {
                 {
                     const data = parsedBody.getData<TeslaAuthenticate>();
                     userData.teslaToken = await teslaApi.getToken(data.username, data.password);
-                    await dynamoDb.store(parsedBody.jwt.id, JSON.stringify(userData));
+                    await dynamoDb.store(parsedBody.jwt.username, JSON.stringify(userData));
                 }
                 break;
             case Actions.TeslaAction:

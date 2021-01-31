@@ -564,7 +564,7 @@
 					{
 						"Name": "email",
 						"AttributeDataType": "String",
-						"Mutable": false,
+						"Mutable": true,
 						"Required": true
 					}
 				]
@@ -628,6 +628,7 @@
 					"Ref": "UserPool"
 				},
 				"AllowedOAuthFlows": [
+					"code",
 					"implicit"
 				],
 				"AllowedOAuthFlowsUserPoolClient": true,
@@ -640,10 +641,10 @@
 					"Google"
 				],
 				"CallbackURLs": [
-					"https://xcitestudios.com"
+					"https://xcitestudios.com,http://localhost:8080/"
 				],
 				"LogoutURLs": [
-					"https://xcitestudios.com"
+					"https://xcitestudios.com,http://localhost:8080/"
 				]
 			},
 			"Metadata": {

@@ -14,7 +14,8 @@ export class CognitoLoginComponent extends React.Component {
     }
 
     state: {
-        user: CognitoUser | null
+        user: CognitoUser | null,
+        accessToken: string
     }
 
     constructor(props) {
@@ -36,23 +37,26 @@ export class CognitoLoginComponent extends React.Component {
         });
 
         this.state = {
-            user: null
+            user: null,
+            accessToken: ''
         };
 
         Hub.listen('auth', (e) => this.authStateChanged(e));
     }
 
-    authStateChanged(e: any) {
+    async authStateChanged(e: any) {
         switch (e.payload.event) {
             case 'signIn':
                 this.setState({
                     user: e.payload.data
                 });
+                await this.getUserToken();
                 break;
 
             case 'signOut':
                 this.setState({
-                    user: null
+                    user: null,
+                    accessToken: ''
                 });
 
                 break;
@@ -77,9 +81,17 @@ export class CognitoLoginComponent extends React.Component {
         });
     }
 
+    getUserToken(): void {
+        this.state.user.getSession((err, data) => {
+            this.setState({
+                accessToken: data.accessToken.jwtToken
+            });
+        }, {clientMetadata: {}});
+    }
+
     render() {
         if (this.state.user !== null) {
-            return <TeslaLoginComponent />;
+            return <TeslaLoginComponent accessToken={this.state.accessToken} />;
         }
 
         return (

@@ -2,11 +2,19 @@ import { Button, FormControl, Input, InputLabel } from "@material-ui/core";
 import * as React from "react";
 
 export class TeslaLoginComponent extends React.Component {
+    props: {
+        accessToken: string
+    }
+
     doLogin(e: React.FormEvent<HTMLFormElement>) {
         e.preventDefault();
     }
 
     render() {
+        if (this.props.accessToken === '') {
+            return <div />;
+        }
+
         return (
             <form onSubmit={this.doLogin}>
                 <p>Enter your Tesla username/password. This will be used to generate a token used to access your account, your username/password will not be stored.</p>

@@ -7,15 +7,16 @@ import { TeslaLoginComponent } from "../forms/tesla.login.component";
 
 export class CognitoLoginComponent extends React.Component {
     props: {
-        clientId: string
-        poolDns: string
-        poolId: string
-        region: string
+        lambdaUrl: string,
+        clientId: string,
+        poolDns: string,
+        poolId: string,
+        region: string,
     }
 
     state: {
         user: CognitoUser | null,
-        accessToken: string
+        accessToken: string,
     }
 
     constructor(props) {
@@ -91,7 +92,7 @@ export class CognitoLoginComponent extends React.Component {
 
     render() {
         if (this.state.user !== null) {
-            return <TeslaLoginComponent accessToken={this.state.accessToken} />;
+            return <TeslaLoginComponent accessToken={this.state.accessToken} lambdaUrl={this.props.lambdaUrl} />;
         }
 
         return (

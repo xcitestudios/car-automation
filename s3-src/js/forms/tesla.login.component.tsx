@@ -3,11 +3,36 @@ import * as React from "react";
 
 export class TeslaLoginComponent extends React.Component {
     props: {
-        accessToken: string
+        accessToken: string,
+        lambdaUrl: string
     }
 
-    doLogin(e: React.FormEvent<HTMLFormElement>) {
+    async doLogin(e: React.FormEvent<HTMLFormElement>) {
         e.preventDefault();
+
+        const formData = new FormData(e.target as HTMLFormElement);
+
+        let body: { [key: string]: any; } = {
+            cognitoAcessToken: this.props.accessToken
+        };
+
+        formData.forEach((v, k) => {
+            body[k] = v.toString();
+        });
+
+        const response = await fetch(
+            this.props.lambdaUrl,
+            {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify(body)
+            }
+        );
+
+        const result  = response.json();
+
     }
 
     render() {

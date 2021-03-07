@@ -4,6 +4,7 @@ import { Actions } from "./ParsedBody/Actions";
 import { decode } from 'js-base64';
 
 export interface Jwt {
+    id: string,
     rawJwt: string,
     username: string
 }

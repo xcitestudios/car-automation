@@ -19,7 +19,6 @@ export class TeslaLoginComponent extends React.Component {
         };
     }
 
-
     async doLogin(e: React.FormEvent<HTMLFormElement>) {
         e.preventDefault();
 

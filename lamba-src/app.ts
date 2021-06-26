@@ -13,8 +13,8 @@ import DynamoDb from "./Storage/Amazon/DynamoDb";
 export const handler = async (event: EventInterface): Promise<any> => {
     const parsedBody = new ParsedBody(event.body);
     const dynamoDb = new DynamoDb(process.env.DYNAMO_DB_TABLE as string);
-    const userData = JSON.parse(await dynamoDb.retrieve(parsedBody.jwt.id));
-    const teslaApi = new TeslaApi(userData.teslaToken);
+    const userData = JSON.parse(await dynamoDb.retrieve(parsedBody.jwt.username));
+    const teslaApi = new TeslaApi(userData ? userData.teslaToken : null);
 
     try {
 

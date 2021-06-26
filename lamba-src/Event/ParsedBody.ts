@@ -1,7 +1,7 @@
 import TeslaAction from "../Tesla/ParsedBody/TeslaAction";
 import TeslaAuthenticate from "../Tesla/ParsedBody/TeslaAuthenticate";
+import jwt_decode from "jwt-decode";
 import { Actions } from "./ParsedBody/Actions";
-import { decode } from 'js-base64';
 
 export interface Jwt {
     id: string,
@@ -19,8 +19,8 @@ export default class ParsedBody {
         const json = JSON.parse(jsonBody);
         this.action = json.action;
         this.data = json.data;
-        this.jwt = JSON.parse(decode(json.jwt));
-        this.jwt.rawJwt = json.jwt;
+        this.jwt = jwt_decode(json.data.jwt.token);
+        this.jwt.rawJwt = json.data.jwt.token;
     }
 
     public getData<T extends TeslaAuthenticate | TeslaAction>(): T {

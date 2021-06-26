@@ -424,48 +424,64 @@
 						}
 					},
 					{
-						"PolicyName": "LambdaDynamoWriteAccess",
+						"PolicyName": "KSMManagement",
 						"PolicyDocument": {
 							"Statement": [
 								{
+									"Effect": "Allow",
 									"Action": [
-										"dynamodb:PutItem",
-										"dynamodb:UpdateItem",
-										"dynamodb:BatchWriteItem"
+										"kms:Decrypt",
+										"kms:Encrypt",
+										"kms:GenerateDataKey"
 									],
-									"Resource": [
-										{
-											"Fn::Join": [
-												"",
-												[
-													{
-														"Fn::Sub": "arn:aws:dynamodb:${AWS::Region}:${AWS::AccountId}:table/"
-													},
-													{
-														"Fn::Select": [
-															1,
-															{
-																"Fn::Split": [
-																	"/",
-																	{
-																		"Fn::GetAtt": [
-																			"UserData",
-																			"Arn"
-																		]
-																	}
-																]
-															}
-														]
-													}
-												]
-											]
-										}
-									],
-									"Effect": "Allow"
+									"Resource": "arn:aws:kms:${AWS::Region}:${AWS::AccountId}:key/*"
 								}
 							]
+						},
+						{
+							"PolicyName": "LambdaDynamoWriteAccess",
+							"PolicyDocument": {
+								"Statement": [
+									{
+										"Action": [
+											"dynamodb:PutItem",
+											"dynamodb:GetItem",
+											"dynamodb:UpdateItem",
+											"dynamodb:BatchWriteItem"
+										],
+										"Resource": [
+											{
+												"Fn::Join": [
+													"",
+													[
+														{
+															"Fn::Sub": "arn:aws:dynamodb:${AWS::Region}:${AWS::AccountId}:table/"
+														},
+														{
+															"Fn::Select": [
+																1,
+																{
+																	"Fn::Split": [
+																		"/",
+																		{
+																			"Fn::GetAtt": [
+																				"UserData",
+																				"Arn"
+																			]
+																		}
+																	]
+																}
+															]
+														}
+													]
+												]
+											}
+										],
+										"Effect": "Allow"
+									}
+								]
+							}
 						}
-					}
 				],
 				"AssumeRolePolicyDocument": {
 					"Statement": [
@@ -492,7 +508,7 @@
 		"LambdaCarManagementFunction": {
 			"Type": "AWS::Lambda::Function",
 			"Properties": {
-				"Runtime": "nodejs12.x",
+				"Runtime": "nodejs14.x",
 				"Handler": "app.handler",
 				"Code": {
 					"S3Bucket": {
@@ -670,9 +686,6 @@
 				],
 				"BillingMode": "PAY_PER_REQUEST",
 				"SSESpecification": {
-					"KMSMasterKeyId": {
-						"Ref": "DynamoDbKey"
-					},
 					"SSEEnabled": true,
 					"SSEType": "KMS"
 				}
@@ -680,35 +693,6 @@
 			"Metadata": {
 				"AWS::CloudFormation::Designer": {
 					"id": "95907da9-7ed5-4e6c-ac00-38a3bb98c638"
-				}
-			}
-		},
-		"DynamoDbKey": {
-			"Type": "AWS::KMS::Key",
-			"Properties": {
-				"Description": "An example CMK",
-				"KeyPolicy": {
-					"Version": "2012-10-17",
-					"Statement": [
-						{
-							"Sid": "Allow administration of the key",
-							"Effect": "Allow",
-							"Principal": {
-								"AWS": {
-									"Fn::Sub": "arn:aws:iam::${AWS::AccountId}:root"
-								}
-							},
-							"Action": [
-								"kms:*"
-							],
-							"Resource": "*"
-						}
-					]
-				}
-			},
-			"Metadata": {
-				"AWS::CloudFormation::Designer": {
-					"id": "ba27cd24-e26a-48ff-9cbe-73558659fc64"
 				}
 			}
 		}

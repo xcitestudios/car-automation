@@ -81,12 +81,12 @@ export class TeslaLoginComponent extends React.Component {
             
                 <FormControl>
                     <InputLabel htmlFor="username">Username:</InputLabel> 
-                    <Input type="text" id="username" />
+                    <Input type="text" id="username" name="username" />
                 </FormControl>
 
                 <FormControl>
                     <InputLabel htmlFor="password">Password:</InputLabel>
-                    <Input type="password" id="password" />
+                    <Input type="password" id="password" name="password" />
                 </FormControl>
 
                 <Button type="submit">Submit</Button>

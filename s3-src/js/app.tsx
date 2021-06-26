@@ -1,6 +1,6 @@
 import * as React from "react";
 import { CognitoLoginComponent } from "./components/cognito.login.component";
-import config from "./ui-config.json";
+const config = require('./ui-config.json');
 
 export class App extends React.Component {
     render() {

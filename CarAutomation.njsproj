@@ -39,6 +39,7 @@
   </PropertyGroup>
   <ItemGroup>
     <TypeScriptCompile Include="lamba-src\app.ts" />
+    <Content Include=".npmrc" />
     <Content Include="AWS.CloudFormation.template" />
     <Content Include="gulpfile.js">
       <SubType>Code</SubType>

@@ -36,7 +36,7 @@ export default class DynamoDb implements Storage {
         const params: DynamoDB.DocumentClient.GetItemInput = {
             TableName: this.tableName,
             Key: {
-                id: key
+                uid: key
             }
         };
 
@@ -44,7 +44,13 @@ export default class DynamoDb implements Storage {
             const result = await this.db
                 .get(params)
                 .promise();
-            return result!.Item!["value"];
+
+
+            if (result.hasOwnProperty('Item') && result.Item.hasOwnProperty('value')) {
+                return result.Item.value;
+            }
+
+            return null;
         } catch (err) {
             throw new Error('Failed to retrieve: ' + err);
         }
